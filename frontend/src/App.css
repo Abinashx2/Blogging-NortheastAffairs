@@ -1,0 +1,31 @@
+/* .container{
+   color: rgb(15, 10, 4);
+   /* border:  3px solid red; */
+   /* background-color: rgb(35, 25, 11); */
+   /* align-items: center; */
+   /* justify-content: center;
+} */ 
+ body{
+   padding: 0px;
+   margin: 0px;
+   /* background-color: aqua; */
+ }
+ /* Makes the entire page take full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+/* Flex container for layout */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 200vh;
+}
+
+/* Content grows to fill space between header and footer */
+.main-content {
+  flex: 1;
+  padding-bottom: 15rem; /* Add spacing to avoid touching footer */
+  
+}

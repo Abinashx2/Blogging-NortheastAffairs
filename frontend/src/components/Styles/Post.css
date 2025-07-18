@@ -1,0 +1,153 @@
+/* Post.css - Modified Version */
+
+.posts-container {
+  max-width: 1000px; /* Reduced from 1200px */
+  margin: 1px auto;
+  padding: 2.5rem; /* Reduced padding */
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  
+}
+
+.post-headline {
+  padding: 2rem;
+  color: #2c3e50; /* New darker color */
+  font-size: 1.9rem; /* Slightly smaller */
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: -0.03em;
+  font-family: 'Montserrat', sans-serif; /* New font */
+}
+
+.posts-list {
+  list-style: none;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Smaller cards */
+  gap: 1.5rem; /* Reduced gap */
+  margin-bottom: 1rem;
+}
+
+.post-border {
+  border: 1px solid hsl(220, 15%, 90%);
+  border-radius: 0.5rem;
+  padding: 1.25rem; /* Reduced padding */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.post-border:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px hsla(0, 0%, 0%, 0.1), 0 2px 4px -1px hsla(0, 0%, 0%, 0.06);
+  background-color: hsl(210, 33%, 98%);
+  cursor: pointer;
+}
+
+.post-border h2 {
+  color: #2c3e50; /* Changed from #3498db */
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+  font-family: 'Poppins', sans-serif;
+}
+
+.blog-image {
+  width: 100%;
+  height: 160px; /* Reduced height */
+  object-fit: cover;
+  border-radius: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-border p {
+  color: hsl(220, 15%, 30%);
+  font-size: 0.9rem; /* Slightly smaller */
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  font-family: 'Open Sans', sans-serif; /* New font for content */
+}
+
+.post-author {
+  color: #27ae60; /* Changed from hsl(219, 80%, 48%) */
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.post-author strong {
+  color: hsl(220, 15%, 20%);
+}
+
+.pagination-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem; /* Reduced gap */
+  margin-top: 1.5rem;
+}
+
+.pagination-control span {
+  color: hsl(220, 15%, 30%);
+  font-size: 0.8rem; /* Slightly smaller */
+}
+
+.btn {
+  padding: 0.4rem 0.8rem; /* Smaller buttons */
+  border: 1px solid hsl(220, 15%, 80%);
+  border-radius: 0.25rem;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(220, 15%, 20%);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.8rem; /* Smaller font */
+}
+
+.btn:hover:not(:disabled) {
+  background-color: hsl(210, 33%, 98%);
+  border-color: hsl(220, 15%, 70%);
+}
+
+.btn:disabled {
+  color: hsl(220, 15%, 70%);
+  cursor: not-allowed;
+  background-color: hsl(220, 15%, 95%);
+}
+
+.Date {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  font-size: 0.9rem; /* Smaller date font */
+  color: #7f8c8d; /* New gray color */
+  margin-top: 0.5rem;
+}
+/* Date styling - add this to your Post.css */
+.Date {
+  font-family: 'Roboto', sans-serif; /* Clean, modern font */
+  font-size: 0.75rem; /* Smaller than body text */
+  color: #718096; /* Subtle gray color */
+  font-style: normal; /* Removes italic if you prefer */
+  margin-top: 0.5rem;
+  letter-spacing: 0.025em;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Optional: Add an icon before the date */
+.Date::before {
+  content: "📅"; /* Calendar icon */
+  font-style: normal;
+  margin-right: 0.25rem;
+}
+
+/* For better hierarchy with author */
+.post-author + .Date {
+  margin-top: 0.25rem;
+}
